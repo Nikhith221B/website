@@ -1,0 +1,127 @@
+<html>
+    <meta charset="UTF-8">
+
+<head>
+   <style>
+      table, th, td {
+        margin: 1%;
+         border: 1px solid rgb(0, 0, 0);
+         color: whitesmoke;
+         border-collapse: collapse; 
+         font-size: 14px;
+         font-weight: lighter;
+      }
+      td, th {
+         padding: 20px;
+      }
+      .title{
+        font-size: 32px;
+        text-align: center !important;
+        font-family: 'Times New Roman', Times, serif;
+      }
+      .container-regis{
+  width: 500px;
+  border: 3px solid rgb(82, 83, 82);
+  padding: 5px;
+  margin-left: 400px;
+  margin-top: 150px;
+  box-shadow: 10%;
+  background-color: rgb(4, 51, 87);
+  color: rgb(255, 255, 255);
+   }
+  #user,#btn{
+    color:black;
+}
+body,html{
+    background-image: url(https://images.unsplash.com/photo-1679346390768-af1fa0231078?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+
+}
+
+   </style>
+   		<meta name="viewport" content="width=device-width, initial-scale=1">
+           <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   
+           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+           <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+           <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+   
+           
+</head>
+<body>
+    <div class="imp">
+    <div class="container-regis">
+        <div class="row-main">
+            <div class="panel-heading">
+                <div class="panel-title text-center">
+                        <h1 class="title">list of all registered events by the user</h1>
+                    </div>
+             </div>
+             <div class="div-regis" style="margin-left: 5%;"> 
+               <label for="name" class="cols-sm-2 control-label">Username</label>
+              <div >
+             <input type="text" id="user" name="username" placeholder="username">
+             <button id="btn" onclick="convert( )"> Click Here </button> 
+             </div>
+             </div>
+              <h3 style="margin-left:5%;"> Resulting Table: </h3>
+              <div id="container" style="margin-left: 4.3%;"></div>
+        </div>
+   </div>
+   </div>
+   <script>
+
+      function convert() {
+         
+         let jsonData = [
+            {
+               username: "mahesh",
+               registeredevents:3,
+            },
+            {
+                username: "manish",
+               registeredevents:1,
+            },
+            {
+             username: "suresh",
+             registeredevents:2,
+            }
+         ];
+         let container = document.getElementById("container");
+         let table = document.createElement("table");
+ 
+         let cols = Object.keys(jsonData[0]);
+         
+
+         let thead = document.createElement("thead");
+         let tr = document.createElement("tr");
+         
+  
+         cols.forEach((item) => {
+            let th = document.createElement("th");
+            th.innerText = item; 
+            tr.appendChild(th); 
+         });
+         thead.appendChild(tr); 
+         table.append(tr) 
+         
+         jsonData.forEach((item) => {
+            let tr = document.createElement("tr");
+
+            let vals = Object.values(item);
+            let iter=0;
+            let user =document.getElementById("user").value;
+            vals.forEach((elem) => {
+                if(elem==user || iter==1){
+                    let td = document.createElement("td");
+               td.innerText = elem;
+               tr.appendChild(td); 
+               iter=iter+1;
+                }
+            });
+            table.appendChild(tr);
+         });
+         container.appendChild(table)
+      }
+   </script>
+</body>
+</html>

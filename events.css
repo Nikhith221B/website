@@ -1,0 +1,114 @@
+.event-card {
+    display: inline-block;
+    width: 300px;
+    height: 420px;
+    margin: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    margin-left: 60px;
+  }
+
+  .event-card:hover {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+  }
+  
+  .event-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .event-details {
+    padding: 20px;
+    text-align: center;
+    background-color: aqua;
+  }
+  
+  .event-details h3 {
+    margin-top: 0;
+  }
+  
+  .register-btn {
+    background-color: #082f49;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .register-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  .form-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  .form-container {
+    color: white !important;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 100px auto;
+    padding: 24px;
+    background-color: #10045a;
+    border-radius: 11px;
+    box-shadow: 0 0 10px rgba(4, 13, 146, 0.5);
+  }
+  
+  .form-container label {
+    display: inline;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .form-container input[type="email"],
+  .form-container input[type="password"] {
+    width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 11px !important;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.form-container button[type="submit"] {
+  padding: 10px;
+  width: max-content;
+  justify-content: center !important;
+  border-radius: 5px;
+  border-color: black;
+  background-color: #008CBA;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none !important;
+  text-decoration-line: none !important;
+}
+
+.form-container button[type="submit"]:hover {
+  background-color: #00688B;
+}
+.form-container button[type="button"]{
+  padding: 10px;
+  width: max-content;
+  justify-content: center !important;
+}
+body{
+  background-color: #082f49;
+}
+

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./events.css">
+</head>
+<body>
+  <div>
+    <h1 style="text-align: center; font-family:'Times New Roman', Times, serif; color: white;">Events Registration</h1>
+  </div>
+  <div class="event-card">
+    <div class="event-image">
+      <img src="https://centricconsulting.com/wp-content/uploads/2018/07/hackathon-logo-1200-800.png" alt="Event 1">
+    </div>
+    <div class="event-details">
+      <h3>HACKATHON</h3>
+      <p>Date: 1st April 2023</p>
+      <p>Time: 2:00pm - 4:00pm</p>
+      <p>Venue: LBC-203</p>
+      <button class="register-btn" onclick="openForm()">Register</button>
+    </div>
+  </div>
+  
+  <div class="event-card">
+    <div class="event-image">
+      <img src="https://th.bing.com/th/id/OIP.mTaD_uxebAU-P18vsteLngHaEa?pid=ImgDet&w=1024&h=611&rs=1" alt="Event 2">
+    </div>
+    <div class="event-details">
+      <h3>BLOCK-CHAIN</h3>
+      <p>Date: 1st April 2023</p>
+      <p>Time: 1:00pm - 2:00pm</p>
+      <p>Venue: SES-105</p>
+      <button class="register-btn" onclick="openForm()">Register</button>
+    </div>
+  </div>
+  
+  <div class="event-card">
+    <div class="event-image">
+      <img src="https://th.bing.com/th/id/OIP.H2DUvDUFRjevsMuFt_iYAgHaD7?pid=ImgDet&rs=1" alt="Event 3">
+    </div>
+    <div class="event-details">
+      <h3>DATA SCIENCE</h3>
+      <p>Date: 2nd April 2023</p>
+      <p>Time: 2:00pm - 4:00pm</p>
+      <p>Venue: CC</p>
+      <button class="register-btn" onclick="openForm()">Register</button>
+    </div>
+  </div>
+  
+  <div class="event-card">
+    <div class="event-image">
+      <img src="https://image.slidesharecdn.com/cloudcomputingworkshop-091116084914-phpapp02/95/cloud-computing-workshop-2-728.jpg?cb=1258361685" alt="Event 4">
+    </div>
+    <div class="event-details">
+      <h3>CLOUD COMPUTING</h3>
+      <p>Date: 3rd April 2023</p>
+      <p>Time: 2:00pm - 4:00pm</p>
+      <p>Venue: LBC</p>
+      <button class="register-btn" onclick="openForm()">Register</button>
+    </div>
+  </div>
+
+  <div class="event-card">
+    <div class="event-image">
+      <img src="https://s3.ap-south-1.amazonaws.com/ulektzmumbai/event_dir/photos/Arduino%20Workshop%20(Data%20-%202022).png" alt="Event 4">
+    </div>
+    <div class="event-details">
+      <h3>ARDUINO</h3>
+      <p>Date: 3rd April 2023</p>
+      <p>Time: 2:00pm - 4:00pm</p>
+      <p>Venue: SMS-102</p>
+      <button class="register-btn" onclick="openForm()">Register</button>
+    </div>
+  </div>
+
+  <div class="event-card">
+    <div class="event-image">
+      <img src="https://ts-production.imgix.net/images/40f6dd4b-1818-4374-81ce-2a274a491f1a.jpg?auto=compress,format&w=800&h=450" alt="Event 4">
+    </div>
+    <div class="event-details">
+      <h3>CODE CONTEST</h3>
+      <p>Date: 4th April 2023</p>
+      <p>Time: 2:00pm - 4:00pm</p>
+      <p>Venue: LBC-102</p>
+      <button class="register-btn" onclick="openForm()">Register</button>
+    </div>
+  </div>
+
+  <div class="form-popup" id="myForm">
+    <form action="/action_page.php" class="form-container">
+      <h1 style="text-align:center;">Register</h1>
+  
+      <label for="email"><b>Email</b></label>
+      <input type="password" placeholder="Enter Email" name="email" required>
+  
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+  
+      <button type="submit" class="btn"><a href="http://127.0.0.1:5500/website/events.html">Register</a></button>
+      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+  </div>
+</body>
+</html>
+<script src="./events.js"></script>
